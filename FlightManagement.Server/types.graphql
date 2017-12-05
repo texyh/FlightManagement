@@ -1,0 +1,23 @@
+
+type Flight @model {
+  id: ID! @isUnique
+  courier: Courier! @relation(name: "CourierFlights")
+
+  departure: DateTime
+  arrival: DateTime
+
+  actualArrival: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Courier @model {
+  id: ID! @isUnique
+  name: String!
+
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  flights : [Flight!]! @relation(name: "CourierFlights")
+
+}
