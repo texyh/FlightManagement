@@ -25,9 +25,11 @@
     "apollo-angular-link-http": "^1.0.1",
     "apollo-cache-inmemory": "^1.1.1",
     "apollo-client": "^2.0.3",
+    "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
+    "jquery": "2.2.0",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
