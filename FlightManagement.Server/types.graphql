@@ -9,6 +9,7 @@ type Flight @model {
   actualArrival: DateTime
   createdAt: DateTime!
   updatedAt: DateTime!
+  
 }
 
 type Courier @model {
@@ -20,4 +21,9 @@ type Courier @model {
 
   flights : [Flight!]! @relation(name: "CourierFlights")
 
+}
+
+type State @model {
+  id: ID! @isUnique
+  name: String!
 }

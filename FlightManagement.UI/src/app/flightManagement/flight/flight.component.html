@@ -1,3 +1,43 @@
-<p>
-  flight works!
-</p>
+<li class="list-group-item">
+    <div class="row top-row">
+      <div class="col-3">
+        <div>
+          <small>Destination: </small>
+        </div>
+        <strong>{{flight.destination}}</strong>
+      </div>
+      <div class="col-3">
+          <div>
+            <small>Departure: </small>
+          </div>
+          <div>{{flight.departureTime | date :'short'}}</div>
+      </div>
+
+      <div class="col-3">
+          <div>
+            <small>Arrival: </small>
+          </div>
+          <div>{{flight.arrivalTime | date: 'short'}}</div>
+      </div>
+
+      <div class="col">
+        <div><small>Flight Duration</small></div>
+        2hrs
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <div><small>Courier</small></div>
+        {{flight.courier.name}}
+      </div>
+      <div class="col-3">
+          <div><small>FirstClass</small></div>
+          <input type="radio" /> {{flight.economyPrice}}
+        </div>
+        <div class="col-3">
+            <div><small>Economy</small></div>
+            <input type="radio" /> {{flight.businessPrice}}
+          </div>
+    </div>
+  </li>

@@ -2,7 +2,7 @@
 export class Courier {
 
     constructor(
-        id?: String,
-        name?: String
+        public id?: String,
+        public name?: String
     ) {}
 }
