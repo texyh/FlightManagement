@@ -2,10 +2,10 @@
 type Flight @model {
   id: ID! @isUnique
   courier: Courier! @relation(name: "CourierFlights")
-  departure: DateTime
-  arrival: DateTime
-  economyPrice: Int!
-  businessPrice: Int!
+  departure: DateTime! 
+  arrival: DateTime! 
+  economyPrice: Int! 
+  businessPrice: Int! 
   actualArrival: DateTime
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -15,11 +15,10 @@ type Flight @model {
 type Courier @model {
   id: ID! @isUnique
   name: String! 
-
   createdAt: DateTime!
   updatedAt: DateTime!
-
   flights : [Flight!]! @relation(name: "CourierFlights")
+}
 
 }
 
@@ -27,3 +26,5 @@ type State @model {
   id: ID! @isUnique
   name: String!
 }
+# @migrationValue(value: "2017-12-08T08:02:42.637Z")
+# @rename(oldname: ""whatever)
