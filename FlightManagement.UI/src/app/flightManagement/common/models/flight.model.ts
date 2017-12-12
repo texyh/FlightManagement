@@ -7,8 +7,8 @@ export class Flight {
     constructor(
         public id?: String,
         public courier?: Courier,
-        public departure?: State,
-        public arrival?: State,
+        public departure?: String,
+        public arrival?: String,
         public departureTime?: Date,
         public arrivalTime?: Date,
         public economyPrice?: number,
@@ -21,6 +21,6 @@ export class Flight {
     }
 
     get destination() {
-        return `${this.departure.name} to ${this.arrival.name}`;
+        return `${this.departure} to ${this.arrival}`;
     }
 }
