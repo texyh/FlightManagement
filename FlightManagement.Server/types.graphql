@@ -2,16 +2,15 @@
 type Flight @model {
   id: ID! @isUnique
   courier: Courier! @relation(name: "CourierFlights")
-
-  departureTime: DateTime! 
-  arrivalTime: DateTime! 
+  departureTime: DateTime! @migrationValue(value: "2017-12-08T08:02:42.637Z")
+  arrivalTime: DateTime! @migrationValue(value: "2017-12-08T08:02:42.637Z")
   economyPrice: Int! 
   businessPrice: Int! 
   actualArrival: DateTime
   createdAt: DateTime!
   updatedAt: DateTime!
-  departure: String!
-  arrival: String!
+  departure: String! @migrationValue(value: "Lagos")
+  arrival: String! @migrationValue(value: "Abuja")
   
 }
 

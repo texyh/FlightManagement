@@ -7,6 +7,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FlightListComponent } from './flightManagement/flight-list/flight-list.component';
 import { from } from 'zen-observable';
 import { SearchComponent } from './search/search.component';
+import { GraphQLModule } from './apolloConfig/apollo.config';
 
 
 
@@ -19,6 +20,7 @@ import { SearchComponent } from './search/search.component';
   ],
   imports: [
     BrowserModule,
+    GraphQLModule,
     FlightManagementModule,
     RouterModule.forRoot( [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
